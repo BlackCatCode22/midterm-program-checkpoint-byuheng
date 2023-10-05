@@ -3,6 +3,7 @@ import java.util.Date;
 public class Animal {
     private static int numOfAnimals = 0;
 
+
     // Animal Attributes.
     private String animalID;
     private String animalName;
@@ -12,7 +13,8 @@ public class Animal {
     private float animalWeight;
     private String arrivingFrom;
 
-    // Animal Getters and Setters
+
+    // Animal Getters and Setters.
     public String getAnimalID() {
         return animalID;
     }
@@ -55,11 +57,13 @@ public class Animal {
     public void setArrivingFrom(String arrivingFrom) {
         this.arrivingFrom = arrivingFrom;
     }
+
     // Create a getter.
     // What type of method is this? Is it static and belongs to a class or...
     // is this method used with objects.
 
     public int getNumOfAnimals() {
+
         return numOfAnimals;
     }
 
@@ -69,7 +73,6 @@ public class Animal {
         System.out.println("\n A new animal was created!");
         numOfAnimals++;
     }
-
 
 
 }
