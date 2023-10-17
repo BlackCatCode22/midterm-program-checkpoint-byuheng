@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Calendar;
 import java.time.LocalDate;
@@ -91,23 +92,63 @@ public class Main {
 
                 String myAnimalBD = " ";
 
+                // Calculate the animal's birthday based on the birth season
                 if (birthSeason.contains("spring")) {
                     myAnimalBD = "Mar 21, " + animalsYearOfBirthDate;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    LocalDate localDateAnimalBirthday = LocalDate.parse("Mar 21, 2017", formatter);
+                    System.out.println("Animal birthday: " +localDateAnimalBirthday);
+                    long animalAgeInYears = ChronoUnit.YEARS.between(localDateAnimalBirthday, currentDate);
+                    System.out.println("Animal birth date is: "+ myAnimalBD +"\n\n");
+                    System.out.println("\nAninal age in years is: "+ animalAgeInYears + "\n\n");
+
+
+
                 }
                 else if (birthSeason.contains("summer")) {
                     myAnimalBD = "Jun 21, " + animalsYearOfBirthDate;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    LocalDate localDateAnimalBirthday = LocalDate.parse("Mar 21, 2017", formatter);
+                    System.out.println("Animal birthday: " +localDateAnimalBirthday);
+                    long animalAgeInYears = ChronoUnit.YEARS.between(localDateAnimalBirthday, currentDate);
+                    System.out.println("Animal birth date is: "+ myAnimalBD +"\n\n");
+                    System.out.println("\nAninal age in years is: "+ animalAgeInYears + "\n\n");
                 }
                 else if (birthSeason.contains("fall")) {
                     myAnimalBD = "Sept 21, " + animalsYearOfBirthDate;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    LocalDate localDateAnimalBirthday = LocalDate.parse("Mar 21, 2017", formatter);
+                    System.out.println("Animal birthday: " +localDateAnimalBirthday);
+                    long animalAgeInYears = ChronoUnit.YEARS.between(localDateAnimalBirthday, currentDate);
+                    System.out.println("Animal birth date is: "+ myAnimalBD +"\n\n");
+                    System.out.println("\nAninal age in years is: "+ animalAgeInYears + "\n\n");
                 }
                 else if (birthSeason.contains("winter")) {
                     myAnimalBD = "Dec 21, " + animalsYearOfBirthDate;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    LocalDate localDateAnimalBirthday = LocalDate.parse("Mar 21, 2017", formatter);
+                    System.out.println("Animal birthday: " +localDateAnimalBirthday);
+                    long animalAgeInYears = ChronoUnit.YEARS.between(localDateAnimalBirthday, currentDate);
+                    System.out.println("Animal birth date is: "+ myAnimalBD +"\n\n");
+                    System.out.println("\nAninal age in years is: "+ animalAgeInYears + "\n\n");
                 }
                 else if (birthSeason.contains("season")) {
                     myAnimalBD = "Jan 1, " + animalsYearOfBirthDate;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    LocalDate localDateAnimalBirthday = LocalDate.parse("Mar 21, 2017", formatter);
+                    System.out.println("Animal birthday: " +localDateAnimalBirthday);
+                    long animalAgeInYears = ChronoUnit.YEARS.between(localDateAnimalBirthday, currentDate);
+                    System.out.println("Animal birth date is: "+ myAnimalBD +"\n\n");
+                    System.out.println("\nAninal age in years is: "+ animalAgeInYears + "\n\n");
                 }
                 else {
                     myAnimalBD = "unable to process" + animalsYearOfBirthDate;
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                    LocalDate localDateAnimalBirthday = LocalDate.parse("Mar 21, 2017", formatter);
+                    System.out.println("Animal birthday: " +localDateAnimalBirthday);
+                    long animalAgeInYears = ChronoUnit.YEARS.between(localDateAnimalBirthday, currentDate);
+                    System.out.println("Animal birth date is: "+ myAnimalBD +"\n\n");
+                    System.out.println("\nAninal age in years is: "+ animalAgeInYears + "\n\n");
                 }
 
                 System.out.println("\n\n Animal birth date is: " + myAnimalBD + "\n\n");
@@ -120,7 +161,7 @@ public class Main {
                 // this will be the birthdate
                 // LocalDate myDate = LocalDate.of(2017, month, day);
 
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
+                /*DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM d, yyyy");
 
                 LocalDate myBirthdayTest = LocalDate.parse(myAnimalBD, formatter);
 
@@ -130,9 +171,7 @@ public class Main {
                 LocalDate myNow = LocalDate.now();
                 LocalDate myAnimalAge = myBirthdayTest - myNow ;
 
-                System.out.println("\n The animals is: " + myAnimalAge);
-
-
+                System.out.println("\n The animals is: " + myAnimalAge);*/
 
 
                 // Subtract 4 years
