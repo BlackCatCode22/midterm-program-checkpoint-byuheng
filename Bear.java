@@ -1,40 +1,33 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
 public class Bear extends Animal {
-    // Create a static member variable that accumulates the number of hyenas created.
-    private static int numOfBears = 0;
 
 
     // Create an ArrayList to store the split values read from animalNames.txt
     private static List<String> myListOfBearNames = new ArrayList<>();
 
-    // write a Getter method to look at the static int numOfHyenas
+
+    // Create a static member variable that accumulates the number of bears created.
+    private static int numOfBears = 0;
+
+    // Write a Getter method to look at the static
     public static int getNumOfBears() {
+
         return numOfBears;
     }
 
     // Create a constructor that will increment numOfHyenas when a new Hyena object is created.
     public Bear() {
-        System.out.println("\n A new Bear object was created!!!");
+        System.out.println("\n A new Hyena object was created!!!");
         numOfBears++;
     }
 
-    public Bear(String aniID, String aniName, LocalDate aniBD, String aniColor, String aniGender,
-                String aniWeight, String aniFrom, LocalDate arrivalDate) {
-        super(aniID, aniName, aniBD, aniColor, aniGender, aniWeight, aniFrom, arrivalDate);
-    }
-
-
-
-
-    // Create a method that input hyena names from a file named: animalNames.txt
-    public static void inputBearNames()  {
+    // Create a method that input bear names from a file named: animalNames.txt
+    public static void inputBearNames() {
         // Define the file path
         String filePath = "C:\\Users\\Heng\\OneDrive\\Documents\\Fresno City College\\Fall '23\\CIT-63-16266 - Mohle, Dennis\\IdeaProjects\\animalNames.txt";
 
@@ -55,13 +48,11 @@ public class Bear extends Animal {
 
                 lineNum++;
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
-
     // output the list.
     public static void listOut() {
         for (String name : myListOfBearNames) {
@@ -69,21 +60,18 @@ public class Bear extends Animal {
 
         }
     }
+    // Pop one name off the list
+    public static String popABearName() {
 
-    // pop one name off the list
-    public static String popBearName() {
         // Remove the first element from the ArrayList
         String removedBearName = "";
         if (!myListOfBearNames.isEmpty()) {
             removedBearName = myListOfBearNames.remove(0);
+
         } else {
-            System.out.println("The ArrayList is empty. Nothing to remove.");
+            System.out.println("ArrayList is empty; nothing to remove.");
         }
         return removedBearName;
     }
-
-
-
-
 
 }

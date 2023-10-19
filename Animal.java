@@ -1,20 +1,20 @@
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Animal {
     private static int numOfAnimals = 0;
 
+
     // Animal Attributes.
     private String animalID;
     private String animalName;
-    private LocalDate animalBirthDate;
+    private Date animalBirthDate;
     private String animalColor;
-    private String animalGender;
-    private String animalWeight;
+    private char animalGender;
+    private float animalWeight;
     private String arrivingFrom;
-    private LocalDate arrivalDate;
 
 
-    // Animal Getters and Setters
+    // Animal Getters and Setters.
     public String getAnimalID() {
         return animalID;
     }
@@ -27,10 +27,10 @@ public class Animal {
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
     }
-    public LocalDate getAnimalBirthDate() {
+    public Date getAnimalBirthDate() {
         return animalBirthDate;
     }
-    public void setAnimalBirthDate(LocalDate animalBirthDate) {
+    public void setAnimalBirthDate(Date animalBirthDate) {
         this.animalBirthDate = animalBirthDate;
     }
     public String getAnimalColor() {
@@ -39,16 +39,16 @@ public class Animal {
     public void setAnimalColor(String animalColor) {
         this.animalColor = animalColor;
     }
-    public String getAnimalGender() {
+    public char getAnimalGender() {
         return animalGender;
     }
-    public void setAnimalGender(String animalGender) {
+    public void setAnimalGender(char animalGender) {
         this.animalGender = animalGender;
     }
-    public String getAnimalWeight() {
+    public float getAnimalWeight() {
         return animalWeight;
     }
-    public void setAnimalWeight(String animalWeight) {
+    public void setAnimalWeight(float animalWeight) {
         this.animalWeight = animalWeight;
     }
     public String getArrivingFrom() {
@@ -57,44 +57,22 @@ public class Animal {
     public void setArrivingFrom(String arrivingFrom) {
         this.arrivingFrom = arrivingFrom;
     }
-    public LocalDate getArrivalDate() {
-        return arrivalDate;
-    }
-    public void setArrivalDate(String arrivingFrom) {
-        this.arrivalDate = arrivalDate;
-    }
 
+    // Create a getter.
+    // What type of method is this? Is it static and belongs to a class or...
+    // is this method used with objects.
 
     public int getNumOfAnimals() {
+
         return numOfAnimals;
     }
 
-    // Constructors
+
+    // Constructor
     public Animal() {
         System.out.println("\n A new animal was created!");
         numOfAnimals++;
     }
 
-    public Animal(String animalID,
-                  String animalName,
-                  LocalDate animalBirthDate,
-                  String animalColor,
-                  String animalGender,
-                  String animalWeight,
-                  String arrivingFrom,
-                  LocalDate arrivalDate ) {
-
-        this.animalID = animalID;
-        this.animalName = animalName;
-        this.animalBirthDate = animalBirthDate;
-        this.animalColor = animalColor;
-        this.animalGender = animalGender;
-        this.animalWeight = animalWeight;
-        this.arrivingFrom = arrivingFrom;
-        this.arrivalDate = arrivalDate;
-
-        // increment the static int!
-        numOfAnimals++;
-    }
 
 }
